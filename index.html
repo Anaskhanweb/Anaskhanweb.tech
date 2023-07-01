@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Anas Khan Personal Portfolio </title>
+    <title>Anas Khan Personal Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -21,11 +21,11 @@
         }
 
         nav {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: 1fr auto;
             align-items: center;
             height: 80px;
-            background-color: rgb(18, 18, 62)
+            background-color: rgb(18, 18, 62);
         }
 
         nav ul {
@@ -44,7 +44,7 @@
         }
 
         nav ul li a:hover {
-            color: rgb(153 153 226);
+            color: rgb(153, 153, 226);
             font-size: 1.04rem;
         }
 
@@ -60,23 +60,18 @@
         }
 
         .firstSection {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             justify-content: space-around;
             align-items: center;
             margin: 0 0;
         }
 
-        .firstSection>div {
-            width: 30%;
-        }
-
         .leftSection {
             font-size: 3rem;
-
-
-
         }
-        .leftSection.buttons{
+
+        .leftSection.buttons {
             padding: 50px 0;
         }
 
@@ -91,9 +86,9 @@
         }
 
         .rightSection img {
-            width: 90%;
+            max-width: 100%;
+            height: auto;
             margin: 50px 0;
-
         }
 
         .purple {
@@ -112,6 +107,10 @@
             max-width: 80vw;
             margin: auto;
             height: 80vh;
+            display: grid;
+            justify-items: center;
+            align-content: center;
+            text-align: center;
         }
 
         .secondSection h1 {
@@ -121,70 +120,53 @@
         .secondSection .box {
             background: white;
             width: 80vw;
-            height: 2px;
             margin: 56px 0;
-            display: flex;
-
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
         }
 
-        .secondSection .vertical {
-            height: 93px;
-            width: 1px;
+        .box .vertical {
             background-color: white;
-            margin: 0 160px;
-        }
-
-        .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
         .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
             font-size: 24px;
-
+            margin-top: 10px;
+            margin-bottom: 5px;
         }
 
         .vertical-desc {
-            position: relative;
-            top: 86px;
             color: gray;
-            width: 150px;
-            font-size: 9px;
-
+            font-size: 14px;
+            text-align: center;
         }
 
         .footer {
             background-color: #0e0e1a;
             height: 240px;
-
-        }
-
-        .footer {
-            display: flex;
-            padding: 0 0;
-            justify-content: space-evenly;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            align-items: center;
         }
 
         .footer ul {
             list-style: none;
-        }
-
-        .footer>div {
-
-            width: 223px;
+            margin: 0;
+            padding: 0;
         }
 
         footer .footer-rights {
             text-align: center;
             color: gray;
             padding: 12px 0;
-
+            grid-column: 1 / -1;
         }
     </style>
 </head>
@@ -192,77 +174,62 @@
 <body>
     <header>
         <nav>
-            <div class="left"> Anas khan Portfolio </div>
+            <div class="left">Anas khan Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/"> Home </a></li>
-                    <li><a href="/"> About </a></li>
-                    <li><a href="/"> Service </a></li>
-                    <li><a href="/"> Projects </a></li>
-                    <li><a href="/"> Contact Me </a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Service</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-
     <main>
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My Name is <span class="purple">Anas khan</span>
-                <div>and I'm a<a href=""></a></div>
-
+                <div>and I'm a <a href=""></a></div>
                 <span id="element"></span>
                 <div class="buttons">
-                    <button class="btn">Download Resume </button>
-                    <button class="btn">Visit Linkdin </button>
-
-
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit LinkedIn</button>
                 </div>
-
             </div>
             <div class="rightSection">
                 <img src="Anas121212.jpg" alt="">
             </div>
-
-
-
         </section>
         <hr>
         <section class="secondSection">
             <span class="text-gray">What I have Done So Far</span>
-
             <h1>Work Experience</h1>
             <div class="box">
                 <div class="vertical">
                     <img class="image-top" src="Anas.png" alt="">
-                    <div class="vertical-title">
-                        HTML Developer(2022-Now)
-                    </div>
+                    <div class="vertical-title">HTML Developer(2022-Now)</div>
                     <div class="vertical-desc">
                         I wanted to share that I've been a passionate HTML developer since my time at Fast University in
-                        2022. HTML is my canvas, and I love creating captivating digital experiences with it. If you
-                        have any HTML projects, I'd be thrilled to collaborate.
+                        2022. HTML is my canvas, and I love creating captivating digital experiences with it. If you have
+                        any HTML projects, I'd be thrilled to collaborate.
                     </div>
                 </div>
 
                 <div class="vertical">
                     <img class="image-top" src="C.png" alt="">
-                    <div class="vertical-title">
-                        C Programer(2022-Now)
-                    </div>
+                    <div class="vertical-title">C Programmer(2022-Now)</div>
                     <div class="vertical-desc">
-                        I'm reaching out to share my deep passion for C programming since my time at Fast
-                        University. C has become my language of choice for crafting efficient and powerful software
-                        solutions. If you have any C programming projects or opportunities, I'd love to collaborate
+                        I'm reaching out to share my deep passion for C programming since my time at Fast University. C
+                        has become my language of choice for crafting efficient and powerful software solutions. If you
+                        have any C programming projects or opportunities, I'd love to collaborate.
                     </div>
                 </div>
 
                 <div class="vertical">
                     <img class="image-top" src="Frontenddevelopment.png" alt="">
-                    <div class="vertical-title">
-                        Front End Developer(2023-Now)
-                    </div>
+                    <div class="vertical-title">Front End Developer(2023-Now)</div>
                     <div class="vertical-desc">
                         I'm currently immersed in learning React and JavaScript for front-end development. The
                         possibilities these technologies offer are endless, and I'm excited to apply my skills to
@@ -273,87 +240,58 @@
 
                 <div class="vertical">
                     <img class="image-top" src="SENGINEERING.png" alt="">
-                    <div class="vertical-title">
-                        Software Engineering(2023-Now)
-                    </div>
+                    <div class="vertical-title">Software Engineering(2023-Now)</div>
                     <div class="vertical-desc">
                         I've completed the "Introduction to Software Engineering" course, marking the initial stage of
                         my software engineering journey. I now have a solid foundation in key concepts and
                         methodologies. I'm eager to apply my skills to real-world projects and contribute to software
                         development initiatives.
-
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
-
         </section>
-
     </main>
     <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Anas Developer portfolio</h3>
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <li> Home </li>
-                    <li> About </li>
-                    <li> Services </li>
-                    <li> Contact Me </li>
-                </ul>
-
-
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li> Home </li>
-                    <li> About </li>
-                    <li> Services </li>
-                    <li> Contact Me </li>
-
-                </ul>
-            </div>
-            <div class="footer-fourth">
-                <ul>
-                    <li> Home </li>
-                    <li> About </li>
-                    <li> Services </li>
-                    <li> Contact Me </li>
-
-                </ul>
-            </div>
-
-
+        <div class="footer-first">
+            <h3>Anas Developer portfolio</h3>
+        </div>
+        <div class="footer-second">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact Me</li>
+            </ul>
+        </div>
+        <div class="footer-third">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact Me</li>
+            </ul>
+        </div>
+        <div class="footer-fourth">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact Me</li>
+            </ul>
         </div>
         <div class="footer-rights">
-
-            Copyright &#169;Anaskhanportfolio.com | All Rights reserved
+            Copyright &#169;
+            Anaskhanportfolio.com | All Rights reserved
         </div>
     </footer>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Front End Web Developer', 'And Javascript Developer'],
+        var typed = new Typed("#element", {
+            strings: ["Front End Web Developer", "And Javascript Developer"],
             typeSpeed: 50,
         });
     </script>
-
 </body>
 
 </html>
